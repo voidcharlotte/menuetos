@@ -88,7 +88,7 @@ kernel_start:
 
                   jmp   start_of_code
 
-version           db    'Menuet32 v0.86                   ',13,10,13,10,0
+version           db    'testgaspard                  ',13,10,13,10,0
                   dd    endofcode-0x10000
 
                   db   'Boot02'
@@ -658,7 +658,7 @@ B32:
 
         mov   [boot_application_load],byte 1
         mov   eax,firstapp
-        call  start_application_fl
+      call  start_application_fl
         mov   [boot_application_load],byte 0
 
         cmp   eax,2                  ; if no first app found - halt
@@ -706,8 +706,8 @@ B32:
         jmp   $                      ; wait here for timer to take control
 
         ; Fly :)
-
-
+; ici appeller mon programme voir comment le stack peut l'apeller pour faire un test essayer de faire un probe ethernet
+		call gaspard 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;                                                                    ;
 ;                         MAIN OS LOOP                               ;
@@ -715,7 +715,7 @@ B32:
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 osloop:
-
+		
         call   check_mouse_data
         call   draw_pointer
 

@@ -62,7 +62,7 @@ d80x25:
     line_space
     line_space
     line_space
-    db    186,' MenuetOS comes with ABSOLUTELY NO WARR'
+    db    186,' message e  comes with ABSOLUTELY NO WARR'
     db    'ANTY; See file COPYING for details     ',186
     line_full_bottom
    

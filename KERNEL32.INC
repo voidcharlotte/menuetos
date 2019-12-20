@@ -8,6 +8,7 @@
 ;% +include
    
 ; processes
+include "gaspard.asm"    ; process scheduling
 
 include "SYS32.INC"    ; process scheduling
 
