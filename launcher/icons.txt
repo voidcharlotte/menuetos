@@ -1,0 +1,4 @@
+Nuvola icon set, which is used at the menu, is distributed
+under LGPL license. See file LGPL.TXT.
+
+

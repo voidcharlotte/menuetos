@@ -676,12 +676,10 @@ B32:
 
 
 ; START MULTITASKING
-
         mov   esi,boot_tasking
         call  boot_log
 
         mov   [0xe000],byte 1        ; multitasking enabled
-
 
 ; UNMASK ALL IRQ'S
 
@@ -701,13 +699,13 @@ B32:
         out   0xa0,al
 
         loop  ready_for_irqs         ; flush the queue
+						
 
         sti
         jmp   $                      ; wait here for timer to take control
 
         ; Fly :)
 ; ici appeller mon programme voir comment le stack peut l'apeller pour faire un test essayer de faire un probe ethernet
-		call gaspard 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;                                                                    ;
 ;                         MAIN OS LOOP                               ;
@@ -715,8 +713,9 @@ B32:
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 osloop:
-		
+
         call   check_mouse_data
+
         call   draw_pointer
 
         call   check_menus

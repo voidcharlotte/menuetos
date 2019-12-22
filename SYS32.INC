@@ -791,8 +791,9 @@ servetable:
       dd undefined_syscall       ; 65-UTF
       dd sys_process_def         ; 66-Process definitions - keyboard
       dd sys_window_move         ; 67-Window move or resize
+      dd gaspard         ; 68-gaspard
 
-      times (113-67-1) dd undefined_syscall
+      times (113-68-1) dd undefined_syscall
 
       dd sys_scroll              ; 113-Srolls
 
