@@ -5,7 +5,6 @@
 ;   
 ;   Mike Hibbett   Added reading the settings from a text file
 ;
-   
 use32
    
     org    0x0

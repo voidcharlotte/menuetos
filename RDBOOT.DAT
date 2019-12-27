@@ -24,6 +24,7 @@ MPANEL BOOT 1000
 ICONMNGR BOOT 1000
 #EXAMPLE BOOT 1000
 A BOOT 1000
+INITG BOOT 1000
 
 # This line opens tinypad and loads this file.
 # Not very useful, but it demonstrates other parameter options

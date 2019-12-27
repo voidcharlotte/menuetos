@@ -511,7 +511,9 @@ cs_exit:
     ret
    
    
-   
+;setipadressint:
+	 ; mov     [stack_ip], ecx
+		;ret
    
 ;***************************************************************************
 ;   Function

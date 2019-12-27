@@ -1,6 +1,8 @@
-; gaspard asm launcher configuration du reseau , dhcp et afficher des messages de statut
+;KEYBOARDMAPDONTOPEN.asm
 
-
+
+; programme qui met le clavier en francais avec un kernel call
+; attention : ne pas l'ouvrir sous linix avec geany ou notepad preferez windows
 
 use32
 
@@ -16,7 +18,6 @@ use32
 
 START:                          ; Start of execution
 
-    
 	call configsystem
 	
 configsystem:
@@ -41,8 +42,7 @@ configsystem:
     mov  ecx,9
     mov  edx,5
     int  0x40
-    mov eax,-1
-     int 0x40	
+
  
 fr_keymap:
    
@@ -87,17 +87,7 @@ fr_keymap_alt_gr:
      db   'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
      db   'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
      db   'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
-   	
-	
-
-	
-	
-
-
    
 
- 
+
 I_END:
-
-
-
