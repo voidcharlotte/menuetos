@@ -37,6 +37,14 @@ fin:
     mov  ebx,3
     mov  ecx,dword [dhcpClientIP]
     int  0x40
+   mov  eax,52
+    mov  ebx,14
+    mov  ecx,dword [dnsip]
+    int  0x40
+      mov     eax, 53 ;;;;; socket stop !!!!!
+    mov     ebx, 1
+    mov     ecx, [socketNum]
+    int     0x40
 	mov eax,-1
 	int 0x40	
 	
@@ -459,6 +467,7 @@ ya              dd  0x0
 dhcpMsgType:    db  0
 dhcpLease:      dd  0
 dhcpClientIP:   dd  0
+dnsip:   db  008,008,008,008
 dhcpServerIP:   dd  0
 dhcpDNSIP:      dd  0
 dhcpSubnet:     dd  0
