@@ -29,10 +29,14 @@ START:                          ; start of execution
 	
 fin:
 
-	mov eax,68
-	mov ebx,1
-	mov ecx,[dhcpClientIP]
-	int 0x40
+;	mov eax,68
+;	mov ebx,1
+;	mov ecx,[dhcpClientIP]
+;	int 0x40
+   mov  eax,52
+    mov  ebx,3
+    mov  ecx,dword [dhcpClientIP]
+    int  0x40
 	mov eax,-1
 	int 0x40	
 	
